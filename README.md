@@ -3,6 +3,7 @@ A SEO Advisor for my blog posts using OpenAI's ChatGPT.  This project is based o
 
 It was designed to be used as a SEO advisor for my blog posts that are written in Markdown format with a [Zola](https://www.getzola.org/) header, but it can also be used as a module.
 
+**Hakspek** is defined by the [The New Hacker's Dictionary](https://mitpress.mit.edu/9780262680929/the-new-hackers-dictionary/) as *a shorthand method of spelling found on many British academic bulletin boards and talker systems*.  I chose it because this project is meant to simplify my writing process.
 
 ## Usage
 Assuming the files to be processed are in `~/texts` and you're under `$HOME`, first clone this repository, navigate inside it, and install the required modules:

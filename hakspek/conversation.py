@@ -28,7 +28,7 @@ def completion(content, summary_len, tags_len, apikey):
     if tokens_in_prompt > 4096:
         # max tokens - tokens_in_sys / 0.75 ~= words/chars available
         available = int((4096 - len(system_prompt) * 0.75) / 0.75)
-        user_prompt = user_prompt[:available]   
+        user_prompt = user_prompt[:available]
     prompt = [
         {'role': 'system', 'content': system_prompt},
         {'role': 'user', 'content': user_prompt}
@@ -36,7 +36,10 @@ def completion(content, summary_len, tags_len, apikey):
     openai.api_key = apikey
     model_id = 'gpt-3.5-turbo'
     response = openai.ChatCompletion.create(
+        # complete list of parameters:
+        # https://platform.openai.com/docs/api-reference/completions/create
         model=model_id,
+        temperature=0.8,
         messages=prompt
     )
     # print(response.choices[-1].message.content)
