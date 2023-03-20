@@ -34,11 +34,10 @@ def completion(content, summary_len, tags_len, apikey):
         {'role': 'user', 'content': user_prompt}
     ]
     openai.api_key = apikey
-    model_id = 'gpt-3.5-turbo'
     response = openai.ChatCompletion.create(
         # complete list of parameters:
         # https://platform.openai.com/docs/api-reference/completions/create
-        model=model_id,
+        model='gpt-3.5-turbo',
         temperature=0.8,
         messages=prompt
     )
